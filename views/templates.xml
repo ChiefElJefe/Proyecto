@@ -1,0 +1,7 @@
+<odoo>
+    <template id="ticket_page" name="Tickets">
+        <t t-call="website.layout">
+            Aqui deberian haber Ticketes
+        </t>
+    </template>
+</odoo>

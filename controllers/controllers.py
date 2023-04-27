@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-from odoo import http
-from odoo.http import request
-
-
-class ProyectoProjectModule(http.Controller):
-    @http.route('/proyecto_project_module/', website=True, auth='public')
-    def index(self, **kw):
-        # return "Hello, world"
-        return request.render("proyecto_project_module.ticket_page", {})
+# from odoo import http
+# from odoo.http import request
+#
+#
+# class ProyectoProjectModule(http.Controller):
+#     @http.route('/proyecto_project_module/', website=True, auth='public')
+#     def index(self, **kw):
+#         # return "Hello, world"
+#         return request.render("proyecto_project_module.ticket_page", {})
 
 #     @http.route('/proyecto_project_module/proyecto_project_module/objects/', auth='public')
 #     def list(self, **kw):

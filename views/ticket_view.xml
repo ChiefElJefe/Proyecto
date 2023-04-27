@@ -20,12 +20,16 @@
             <field name="model">proyecto.ticket</field>
             <field name="arch" type="xml">
                 <form string="Ticket">
+                    <header>
+                        <field name="stage_id" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <group>
                             <field name="name"/>
                             <field name="email"/>
-                            <field name="subject"/>
+                            <field name="subject" widget="selection"/>
                             <field name="description"/>
+                            <field name="kanban_state" widget="selection_badge" class="ml-auto"/>
                         </group>
                     </sheet>
                 </form>
@@ -36,14 +40,18 @@
             <field name="name">proyecto.ticket.kanban</field>
             <field name="model">proyecto.ticket</field>
             <field name="arch" type="xml">
-                <kanban string="Ticket">
-                            <field name="name"/>
-                            <field name="email"/>
-                            <field name="subject"/>
-                            <field name="description"/>
+                <kanban default_group_by="stage_id" string="Ticket">
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="subject" widget="selection"/>
+                    <field name="description"/>
+                    <field name="stage_id"/>
+                    <field name="kanban_state"/>
+                    <progressbar field="kanban_state"
+                                 colors='{"start": "danger", "working_in_it": "warning", "fixed": "success"}'/>
                     <templates>
                         <t t-name="kanban-box">
-                            <div class="oe_kanban_global_click">
+                            <div class="oe_kanban_global_click" t-att-data-id="record.id">
                                 <div class="oe_kanban_details">
                                     <strong class="o_kanban_record_title">
                                         <field name="display_name"/>
@@ -51,10 +59,12 @@
                                     <div class="o_kanban_tags_section"/>
                                     <ul>
                                         <li>
-                                            Email: <field name="email"/>
+                                            Email:
+                                            <field name="email"/>
                                         </li>
                                         <li>
-                                            Subject: <field name="subject"/>
+                                            Subject:
+                                            <field name="subject"/>
                                         </li>
                                     </ul>
                                 </div>
@@ -66,7 +76,7 @@
         </record>
 
         <record model="ir.actions.act_window" id="proyecto_ticket_action">
-            <field name="name">proyecto.ticket.action</field>
+            <field name="name">Tickets</field>
             <field name="res_model">proyecto.ticket</field>
             <field name="view_mode">kanban,tree,form</field>
         </record>

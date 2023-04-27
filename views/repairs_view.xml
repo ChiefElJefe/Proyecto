@@ -24,12 +24,12 @@
     </record>
 
     <record model="ir.actions.act_window" id="proyecto_repairs_action">
-        <field name="name">proyecto.ticket.action</field>
-        <field name="res_model">proyecto.ticket</field>
+        <field name="name">Repairs</field>
+        <field name="res_model">proyecto.repairs</field>
         <field name="view_mode">tree,form</field>
     </record>
-    <menuitem name="Repair" id="proyecto_project_module.menu_1" parent="proyecto_project_module.menu_root"/>
+    <menuitem name="Repair" id="proyecto_project_module.menu_2" parent="proyecto_project_module.menu_root"/>
 
-    <menuitem name="Repairs" id="proyecto_project_module.menu_1_list" parent="proyecto_project_module.menu_1"
+    <menuitem name="Repairs" id="proyecto_project_module.menu_2_list" parent="proyecto_project_module.menu_2"
               action="proyecto_repairs_action"/>
 </odoo>

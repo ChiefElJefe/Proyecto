@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','website'],
 
     # always loaded
     'data': [
@@ -29,6 +29,7 @@
         'views/repairs_view.xml',
         'data/data.xml',
         'views/templates.xml',
+        'views/form_ticket.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

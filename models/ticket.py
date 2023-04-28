@@ -31,6 +31,6 @@ class Ticket(models.Model):
     name = fields.Char("User")
     email = fields.Char(string="Email")
     subject = fields.Selection(BUGS_TYPES, string="Subject")
-    kanban_state = fields.Selection(STATE_TYPE, string="Status")
+    kanban_state = fields.Selection(STATE_TYPE, string="Status", default='start')
     description = fields.Text(string="Description")
     stage_id = fields.Many2one('proyecto.repairs', default=_default_stage, group_expand='_expands_group_ids')

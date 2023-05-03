@@ -1,0 +1,16 @@
+<odoo>
+    <record model="ir.module.category" id="proyecto_security">
+        <field name="name">Tickets</field>
+        <field name="description">Access for Tickets</field>
+        <field name="sequence">7</field>
+    </record>
+    <record id="programer_access" model="res.groups">
+        <field name="name">Programer</field>
+        <field name="category_id" ref="proyecto_security"/>
+    </record>
+    <record id="director_access" model="res.groups">
+        <field name="name">Director</field>
+        <field name="category_id" ref="proyecto_security"/>
+        <field name="implied_ids" eval="[(4, ref('programer_access'))]"/>
+    </record>
+</odoo>

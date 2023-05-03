@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="repairs_todo1" model="proyecto.repairs">
+            <field name="name">To-Do</field>
+        </record>
+        <record id="repairs_inprogress2" model="proyecto.repairs">
+            <field name="name">In progress</field>
+        </record>
+        <record id="repairs_notification3" model="proyecto.repairs">
+            <field name="name">Notification</field>
+        </record>
+        <record id="repairs_finished4" model="proyecto.repairs">
+            <field name="name">Finished</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,45 @@
+<odoo>
+    <record model="ir.ui.view" id="proyecto_repairs_tree">
+        <field name="name">proyecto.repairs.tree</field>
+        <field name="model">proyecto.repairs</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="proyecto_repairs_form">
+        <field name="name">proyecto.repairs.form</field>
+        <field name="model">proyecto.repairs</field>
+        <field name="arch" type="xml">
+            <form string="Repairs">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="proyecto_repairs_search">
+        <field name="name">proyecto.repairs.search</field>
+        <field name="model">proyecto.repairs</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="proyecto_repairs_action">
+        <field name="name">Repairs</field>
+        <field name="res_model">proyecto.repairs</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="Repair" id="proyecto.menu_2" parent="proyecto.menu_root"/>
+
+    <menuitem name="Repairs" id="proyecto.menu_2_list" parent="proyecto.menu_2"
+              action="proyecto_repairs_action"/>
+</odoo>

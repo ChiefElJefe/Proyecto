@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_proyecto_project_module_proyecto_project_module,proyecto_project_module.proyecto_project_module,model_proyecto_project_module_proyecto_project_module,base.group_user,1,1,1,1
+programer_access_ticket,Programer,model_proyecto_ticket,programer_access,1,1,0,0
+programer_access_repairs,Programer,model_proyecto_repairs,programer_access,1,1,0,0
+director_access_ticket,Director,model_proyecto_ticket,director_access,1,1,1,1
+director_access_repairs,Director,model_proyecto_repairs,director_access,1,1,1,1

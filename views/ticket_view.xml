@@ -81,11 +81,11 @@
             <field name="view_mode">kanban,tree,form</field>
         </record>
 
-        <menuitem name="Tickets" id="proyecto_project_module.menu_root"/>
+        <menuitem name="Tickets" id="proyecto.menu_root"/>
 
-        <menuitem name="Ticket" id="proyecto_project_module.menu_1" parent="proyecto_project_module.menu_root"/>
+        <menuitem name="Ticket" id="proyecto.menu_1" parent="proyecto.menu_root"/>
 
-        <menuitem name="Tickets" id="proyecto_project_module.menu_1_list" parent="proyecto_project_module.menu_1"
+        <menuitem name="Tickets" id="proyecto.menu_1_list" parent="proyecto.menu_1"
                   action="proyecto_ticket_action"/>
 
     </data>

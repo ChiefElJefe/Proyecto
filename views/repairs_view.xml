@@ -28,8 +28,8 @@
         <field name="res_model">proyecto.repairs</field>
         <field name="view_mode">tree,form</field>
     </record>
-    <menuitem name="Repair" id="proyecto_project_module.menu_2" parent="proyecto_project_module.menu_root"/>
+    <menuitem name="Repair" id="proyecto.menu_2" parent="proyecto.menu_root"/>
 
-    <menuitem name="Repairs" id="proyecto_project_module.menu_2_list" parent="proyecto_project_module.menu_2"
+    <menuitem name="Repairs" id="proyecto.menu_2_list" parent="proyecto.menu_2"
               action="proyecto_repairs_action"/>
 </odoo>

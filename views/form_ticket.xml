@@ -13,7 +13,7 @@
                         class="s_parallax parallax s_parallax_is_fixed bg-black-50 o_colored_level o_half_screen_height"
                         data-scroll-background-ratio="1" data-snippet="s_parallax" data-name="Parallax"
                         style="background-image: none;">
-                    <span class="s_parallax_bg oe_img_bg" t-att-src="('/proyecto_project_module/static/src/img/back_parallax.png')"
+                    <span class="s_parallax_bg oe_img_bg" t-att-src="('/proyecto/static/src/img/back_parallax.png')"
                           style="background-position: 50% 75%;"/>
                     <div class="o_we_bg_filter bg-black-50"/>
                     <div class="oe_structure oe_empty">
@@ -67,9 +67,9 @@
         <field name="type">qweb</field>
         <field name="url">/incidence_send</field>
         <field name="website_published">True</field>
-        <field name="key">proyecto_project_module.send_incidence</field>
+        <field name="key">proyecto.send_incidence</field>
         <field name="arch" type="xml">
-            <t name="Send" t-name="proyecto_project_module.send_incidence">
+            <t name="Send" t-name="proyecto.send_incidence">
                 <t t-call="website.layout">
                     <div id="wrap">
                         <div class="container">
